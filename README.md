@@ -1,2 +1,2 @@
 # Requests
-A simple collection of examples for getting API data
+A simple collection of examples for various REST API functions
