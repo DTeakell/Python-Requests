@@ -1,12 +1,13 @@
-# Date: 7/27/2023
-# File: Calculator.py
+# Date: 8/21/2023
+# File: python-get.py
 # Name: Dillon Teakell
-# Desc: Calculator using Python 
+# Desc: GET Method using Requests
 #
 #
 
 import requests
 
+# GET
 def get_api(url):
 
     response = requests.get(url)
@@ -16,13 +17,14 @@ def get_api(url):
 
 def main():
 
+    # Set custom parameters for getting custom results
     latitude = 37.3541
     longitude = -121.9552
 
-    url = f"https://api.open-meteo.com/v1/gfs?latitude={latitude}&longitude={longitude}&current_weather"\
-    f"?latitude={latitude}"\
-    f"?longitude={longitude}"\
-    
+    # Use f-statements to format URL to use custom parameters
+    url = f"https://api.open-meteo.com/v1/gfs?latitude={latitude}&longitude={longitude}&current_weather"
+
+    #Call function
     get_api(url)
 
 main()
